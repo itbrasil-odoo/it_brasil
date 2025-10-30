@@ -30,5 +30,5 @@ class DocumentSerie(models.Model):
         if self._is_invalid_number(document_number) or self.check_number_in_use(
             document_number
         ):
-            document_number = self.next_seq_number()
+            document_number = self.internal_sequence_id._next()
         return document_number
