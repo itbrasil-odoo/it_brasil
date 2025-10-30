@@ -25,7 +25,7 @@ class ProductTemplate(models.Model):
     fiscal_type = fields.Selection(
         selection=PRODUCT_FISCAL_TYPE,
         string="Fiscal Type",
-        company_dependent=True,
+        company_dependent=True
     )
 
     icms_origin = fields.Selection(
