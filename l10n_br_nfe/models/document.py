@@ -841,6 +841,7 @@ class NFe(spec_models.StackedModel):
         self.write({"xml_error_message": erros or False})
 
     def _eletronic_document_send(self):           
+#        import pudb; pu.db
         super(NFe, self)._eletronic_document_send()
         for record in self.filtered(filter_processador_edoc_nfe):
             record._export_fields_pagamentos()
